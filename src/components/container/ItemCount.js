@@ -2,11 +2,13 @@ import {useState} from "react"
 import './ItemCount.css';
 import ItemCountlogo from './ItemCount.png';
 
-const ItemCount = ({ stock, initial,  onAdd }) => {
-    const [contador, setContador] = useState(1)
+
+
+const ItemCount = ({ stock, initial, onAdd }) => {
+    const [contador, setContador] = useState(initial)
 
     const sumar = () => {
-      if (contador >= 5){
+      if (contador >= stock){
         return;
     }
         setContador(contador+1);
@@ -17,8 +19,9 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
         }
         setContador(contador-1);
     }
-
+    
     return (
+      
       <>  
         <div class="card" >
         <img src={ItemCountlogo} class="card-img-top" alt="..."></img>
@@ -32,7 +35,7 @@ const ItemCount = ({ stock, initial,  onAdd }) => {
                 <button type="button" onClick={restar} class="btn btn-outline-primary btn-sm">-</button>
              </div>
              <div className="text-center mt-2">
-             <button type="button" class="btn btn-primary btn-sm">Agregar producto</button>
+             <button type="button" onClick={onAdd} class="btn btn-primary btn-sm">Agregar producto</button>
              </div>
           </div>
         </div>
