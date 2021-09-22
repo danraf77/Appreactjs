@@ -2,18 +2,18 @@
 const Nav = () => {
     return (
         <>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Laptops</a>
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li className="nav-item">
+                        <a className="nav-link active" aria-current="page" href="#navs">Hombres</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Computo</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#navs">Mujeres</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accesorios</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#navs">Niños</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tablets</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="#navs">Accesorios</a>
                     </li>
 
                 

@@ -5,7 +5,7 @@ const CartWidget = ({cart}) => {
         <>
               
               
-              <span class="ms-5 pb-2"><Cart2 color="royalblue" size={20}/></span><span class="badge rounded-pill bg-primary">{cart}</span>
+              <span className="ms-5 pb-2"><Cart2 color="royalblue" size={20}/></span><span className="badge rounded-pill bg-primary">4</span>
               
         </>
        
