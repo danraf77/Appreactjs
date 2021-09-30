@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import './ItemCount.css';
 const Item = ({producto}) => {
     return (
@@ -10,7 +11,8 @@ const Item = ({producto}) => {
                 <div class="card-body text-center">
                     <h5 class="card-title">{producto.title}</h5>
                     <p>US$ {producto.price}</p>
-                    <button type="button" class="btn btn-outline-secondary">Ver detalle</button>
+                    
+                    <Link class="btn btn-outline-secondary" to={`productos/${producto.id}`} role="button">ver detalle</Link>
                     
                 </div>
             </div>

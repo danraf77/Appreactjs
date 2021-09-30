@@ -14,7 +14,7 @@ const Nav = () => {
                     <Link className="nav-link" to="/categoria/3">Niños</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/categoria/4">Accesorios</Link>
+                    <Link className="nav-link" to="/productos">productos</Link>
                     </li>
 
                 

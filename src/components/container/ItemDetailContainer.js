@@ -1,25 +1,28 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "./ItemDetail"
+import {useParams} from "react-router-dom"
 
 let greeting="Compras mas por menos"     
 
 const ItemDetailContainer = () => {
+
+    const {id} = useParams()
  
     const [productos,setProductos] = useState ([])
    
      useEffect(()=>{
              setTimeout(()=>{
-                 fetch('https://fakestoreapi.com/products/')
+                 fetch(`https://fakestoreapi.com/products/${id}`)
      .then(res => res.json())
      .then((data) => {
         
         const getItem = {
-            id: data[0].id,
-            title: data[0].title,
-            price: data[0].price,
-            description: data[0].description,
-            category: data[0].category,
-            image: data[0].image
+            id: data.id,
+            title: data.title,
+            price: data.price,
+            description: data.description,
+            category: data.category,
+            image: data.image
 
 
         }

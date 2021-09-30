@@ -11,7 +11,7 @@ const ItemDetail = ({title, image, price, description, category}) => {
                     <h5 class="card-title">{title}</h5>
                     <p class="card-text">{description}</p>
                     <p>US$ {price}</p>
-                    <button type="button" class="btn btn-outline-secondary">Ver detalle</button>
+                    
                     
                 </div>
             </div>
