@@ -1,19 +1,20 @@
+import {Link, link} from "react-router-dom"
 
 const Nav = () => {
     return (
         <>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#navs">Hombres</a>
+                    <Link className="nav-link" to="/categoria/1">Hombres</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#navs">Mujeres</a>
+                        <Link className="nav-link" to="/categoria/2">Mujeres</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#navs">Niños</a>
+                    <Link className="nav-link" to="/categoria/3">Niños</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#navs">Accesorios</a>
+                    <Link className="nav-link" to="/categoria/4">Accesorios</Link>
                     </li>
 
                 

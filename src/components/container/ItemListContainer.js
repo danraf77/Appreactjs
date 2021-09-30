@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
 
 let greeting="Compras mas por menos"
@@ -10,6 +11,8 @@ const productosIniciales = ([
 const ItemListContainer = () => {
 
    const [productos,setProductos] = useState ([])
+   const parametros = useParams()
+
 
     useEffect(()=>{
         const async_mock = new Promise((resolver)=>{
