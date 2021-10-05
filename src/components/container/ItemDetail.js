@@ -1,4 +1,5 @@
 import './ItemCount.css';
+import ItemCount from './ItemCount';
 const ItemDetail = ({title, image, price, description, category}) => {
     return (
         <>
@@ -10,7 +11,9 @@ const ItemDetail = ({title, image, price, description, category}) => {
                 <div class="card-body text-center">
                     <h5 class="card-title">{title}</h5>
                     <p class="card-text">{description}</p>
+                    <p class="card-text">{category}</p>
                     <p>US$ {price}</p>
+                    <ItemCount />
                     
                     
                 </div>

@@ -5,10 +5,10 @@ import ItemCountlogo from './ItemCount.png';
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {
-    const [contador, setContador] = useState(initial)
+    const [contador, setContador] = useState(1)
 
     const sumar = () => {
-      if (contador >= stock){
+      if (contador >= 5){
         return;
     }
         setContador(contador+1);
@@ -23,12 +23,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     return (
       
       <>  
-        <div className="card" >
-        <img src={ItemCountlogo} className="card-img-top" alt="..."></img>
-       
-          <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
             <div className="btn-wrapper mt-3 text-center">
                 <button type="button" onClick={sumar} className="btn btn-outline-primary btn-sm">+</button>
                 <span className="me-2 ms-2">{contador}</span>
@@ -37,8 +32,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
              <div className="text-center mt-2">
              <button type="button" onClick={onAdd} className="btn btn-primary btn-sm">Agregar producto</button>
              </div>
-          </div>
-        </div>
+
 
       </>  
        

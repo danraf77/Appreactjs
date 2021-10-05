@@ -23,43 +23,43 @@ const ItemDetailContainer = () => {
             description: data.description,
             category: data.category,
             image: data.image
-
-
         }
         
-        setProductos(getItem)
-    
-    
-    
-    
+        setProductos(getItem)  
     })
              },2000)
      },[])
-  
 
-
-    return (
-        <>
-        <div className="container">
-        <p className="mt-3 mb-3"><h5> {greeting} </h5></p>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-                    <div className="col">
-                    <ItemDetail 
-                    id = {productos.id} 
-                    title = {productos.title} 
-                    price = {productos.price} 
-                    description = {productos.description} 
-                    category = {productos.category}
-                    image ={productos.image} 
-                    /> 
-                    </div>
-
-              
-              </div>       
-        </div>
-        </>   
-    );
-
+    
+        return (
+            <>
+            { ! productos.id ? 
+                <div className="container">
+                <div className="d-flex align-items-center mt-5 mb-5">
+                <strong>Loading...</strong>
+                <div className="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+                </div>  
+                </div>
+            :
+            <div className="container">
+            <p className="mt-3 mb-3"><h5> {greeting} </h5></p>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    
+                        <div className="col">
+                        <ItemDetail 
+                        id = {productos.id} 
+                        title = {productos.title} 
+                        price = {productos.price} 
+                        description = {productos.description} 
+                        category = {productos.category}
+                        image ={productos.image} 
+                        /> 
+                        </div>
+                  </div>       
+            </div> 
+            }
+            </>   
+       
+        )
 }
 export default ItemDetailContainer
