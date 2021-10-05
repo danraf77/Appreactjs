@@ -1,6 +1,10 @@
 import './ItemCount.css';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
+
 const ItemDetail = ({title, image, price, description, category}) => {
+
+
     return (
         <>
               
@@ -13,7 +17,7 @@ const ItemDetail = ({title, image, price, description, category}) => {
                     <p class="card-text">{description}</p>
                     <p class="card-text">{category}</p>
                     <p>US$ {price}</p>
-                    <ItemCount />
+                    <ItemCount/>
                     
                     
                 </div>
