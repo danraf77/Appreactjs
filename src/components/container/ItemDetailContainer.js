@@ -46,14 +46,7 @@ const ItemDetailContainer = () => {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     
                         <div className="col">
-                        <ItemDetail 
-                        id = {productos.id} 
-                        title = {productos.title} 
-                        price = {productos.price} 
-                        description = {productos.description} 
-                        category = {productos.category}
-                        image ={productos.image} 
-                        /> 
+                        <ItemDetail productos ={productos}/>  
                         </div>
                   </div>       
             </div> 

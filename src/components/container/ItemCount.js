@@ -1,11 +1,10 @@
 import {useState} from "react"
 import './ItemCount.css';
-import ItemCountlogo from './ItemCount.png';
 import {Link} from "react-router-dom"
 
 
 
-const ItemCount = ({ stock, initial}) => {
+const ItemCount = ({onAdd}) => {
     const [contador, setContador] = useState(1)
 
     const sumar = () => {
@@ -20,11 +19,7 @@ const ItemCount = ({ stock, initial}) => {
         }
         setContador(contador-1);
     }
-    const [cart, setCart] = useState(0)
-    const onAdd = () => {
-    setCart(cart+contador);
-    setContador(0);
-      }
+
     
     return (
       
@@ -36,8 +31,8 @@ const ItemCount = ({ stock, initial}) => {
                 <button type="button" onClick={restar} className="btn btn-outline-primary btn-sm">-</button>
              </div>
              <div className="text-center mt-2">
-             <button type="button" onClick={onAdd} className="btn btn-primary btn-sm">Agregar producto</button>
-             <p>{cart} agregados</p>
+             <button type="button" onClick={() => onAdd(contador)} className="btn btn-primary btn-sm">Agregar producto</button>
+             
              <Link class="btn btn-outline-secondary" to="/cart" role="button">terminar mi compra </Link>
              </div>
 

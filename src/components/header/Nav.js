@@ -1,4 +1,4 @@
-import {Link, link} from "react-router-dom"
+import {Link} from "react-router-dom"
 
 const Nav = () => {
     return (
@@ -14,7 +14,7 @@ const Nav = () => {
                     <Link className="nav-link" to="/categoria/3">Niños</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/productos">productos</Link>
+                    <Link className="nav-link" to="/cart">Carrito</Link>
                     </li>
 
                 

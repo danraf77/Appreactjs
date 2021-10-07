@@ -6,11 +6,19 @@ import ItemDetailContainer from "./components/container/ItemDetailContainer"
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
+import { ItemContext } from "./components/context/ItemContext"
+import { useState } from "react"
 
 const App = () => {
-    return (
-        <BrowserRouter>
 
+
+
+    const [carrito, setCarrito] = useState ([]);
+
+    return (
+        <>
+        <ItemContext.Provider value = {{carrito, setCarrito}}>
+        <BrowserRouter>
         <Header />
         <Switch>
         <Route path="/" component={ItemListContainer} exact/>
@@ -19,9 +27,10 @@ const App = () => {
         <Route path="/cart" component={Cart}/>
         </Switch>
         <Footer />
-
-
-        </BrowserRouter>
+       </BrowserRouter>
+       </ItemContext.Provider>
+       </>
+      
     )
 }
 export default App
